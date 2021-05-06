@@ -4,6 +4,7 @@ RUN set -ex;\
     apt-get install build-essential cmake git libjson-c-dev libwebsockets-dev fakeroot proot byobu neofetch ffmpeg neofetch vim nano nmap byobu nodejs npm ruby ruby-dev -y
 #Pentest Tool Download
 RUN mkdir /home/user
+ENV TERM=xterm
 WORKDIR /home/user
 RUN gem install wpscan
 RUN python3 -m pip install sqlmap
